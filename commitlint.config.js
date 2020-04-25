@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   rules: {
     'body-leading-blank': [2, 'always'],
@@ -15,7 +13,7 @@ module.exports = {
     'type-enum': [
       2,
       'always',
-      ['build', 'chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'style', 'test'],
-    ],
-  },
-};
+      ['build', 'chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'style', 'test']
+    ]
+  }
+}

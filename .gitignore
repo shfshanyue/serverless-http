@@ -1,3 +1,6 @@
 /.eslintcache
-/node_modules
+node_modules
 npm-debug.log
+.serverless
+.env_temp
+.DS_Store
