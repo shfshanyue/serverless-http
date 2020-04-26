@@ -1,8 +1,17 @@
+const fs = require('fs')
+const path = require('path')
 const { createServer, proxy } = require('tencent-serverless-http')
+
 const { main } = require('./package.json')
 
-// TODO: index.js 会报错，原因未明
-const app = require(main || '.')
+let appPath
+if (fs.existsSync('./index.js')) {
+  appPath = './index'
+} else {
+  appPath = path.resolve(main)
+}
+
+const app = require(appPath)
 
 function getRequestHandler(application) {
   // 目前只兼容 koa 及 express
